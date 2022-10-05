@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+  example-docs:
+    build: .
+    restart: unless-stopped
+    ports:
+        - "8124:8000"
+    volumes:
+        - ..:/repos:ro
+    command: mkdocs serve -f /repos/mkdocs.yml -a 0.0.0.0:8000 -t material

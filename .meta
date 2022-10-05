@@ -1,0 +1,5 @@
+{
+  "projects": {
+    "second-repo": "git@github.com:cribmove/mkdocs-example-demo-second-repo.git"
+  }
+}

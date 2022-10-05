@@ -1,0 +1,57 @@
+site_name: Great Documentation Example
+docs_dir: docs
+repo_url: https://github.com/cribmove/mkdocs-example-demo
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.tracking
+    - navigation.tabs.sticky
+    - navigation.expand
+    - navigation.prune
+    - navigation.indexes
+    - navigation.top
+  palette:
+    primary: 'black'
+
+nav:
+  - Intro: 'index.md'
+
+plugins:
+  - monorepo
+  - mermaid2
+  - search
+  - awesome-pages
+  - markmap
+  - render_swagger
+
+extra_javascript:
+  - https://unpkg.com/mermaid/dist/mermaid.min.js
+
+markdown_extensions:
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - toc:
+      permalink: true
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+
+extra_css:
+  - css/extra.css
