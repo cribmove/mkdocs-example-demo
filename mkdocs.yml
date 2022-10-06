@@ -17,7 +17,10 @@ theme:
 
 nav:
   - Intro: 'index.md'
-
+  - Example: 'example.md'
+  - SubPages: '*include ./example-subpage/*/mkdocs.yml'
+  - External Repository: '*include ./second-repo/mkdocs.yml'
+  
 plugins:
   - monorepo
   - mermaid2
@@ -38,9 +41,6 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.mark
   - pymdownx.tilde
-  - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
   - attr_list
   - md_in_html
   - admonition
